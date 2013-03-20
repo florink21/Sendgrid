@@ -1,0 +1,53 @@
+!!!
+%html
+  %head
+    %title ZenGrid by SendGrid CS IG
+    = stylesheet_link_tag    "application", :media => "all"
+   
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          =link_to image_tag("sendgrid-logo.png", :alt => "sendgrid-logo", :class => "brand", :width => "160px", :height => "45px")
+          %ul.nav.pull-right
+            %li.dropdown
+              - if user_signed_in?
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  = current_user.email
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    = link_to 'Edit profile', edit_user_registration_path
+                  %li
+                    = link_to "Logout", destroy_user_session_path, method: :delete
+              - else
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Account
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    = link_to "Sign up", new_user_registration_path
+                  %li
+                    = link_to "Login", new_user_session_path
+          %ul.nav.pull-right
+            %li.dropdown
+              - if user_signed_in?
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Tools
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    = link_to 'Whitelabel Validator', :controller => :wl_validate, :action => :index
+                    = link_to 'Support Dashboard', :controller => :dashboard, :action => :index
+
+
+    %footer
+      = javascript_include_tag "application"
+   
+    .container.main
+      .row
+        .span12
+          =yield
+ 
+   

@@ -1,0 +1,2 @@
+module WlValidateHelper
+end

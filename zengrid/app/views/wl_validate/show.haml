@@ -1,0 +1,241 @@
+#validation_info
+  #validated_domain.smaller-hero-unit
+    %center
+      %h4 White Label Validation Results
+      #domain_name.ui-toolbar
+        %h2            
+          =@resDomain
+
+#legend.row-fluid
+  #legend_content.bs-docs-example.span12
+    %center
+      #legend_pass.alert-success.span3.legend_item
+        Passed
+      #legend_fail.alert-error.span3.legend_item
+        Failed
+      #legend_error.alert-error.span3.legend_item
+        Error
+      #legend_info.alert-info.span3.legend_item
+        Optional Information
+
+/ #toggle_all.row-fluid
+/   #toggleit.btn.btn-default.btn-mini.pull-right
+/     Expand/Collapse All
+
+#results.row-fluid.widget
+  %h4
+    -if @resSPF == "PASS"
+      #spf_results.well.alert-success
+        #spf_icon.span1.validate_image
+          %center
+            =image_tag "wl_pass.gif"
+        #spf_label.span2
+          SPF
+        #spf_results.span2
+          =@resSPF
+
+        #spf_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "#results", "data-toggle" => "collapse", :href => "#spf_moreinfo_body"}
+            Show/Hide More Info
+        %br
+        %br
+        #spf_moreinfo_body.accordion-body.collapse
+          #spf_moreinfo_inner.accordion-inner
+            -@resSPFReason.each do |rs|
+              #spf_moreinfo_data.uneditable-input.span11
+                =rs
+              %br
+    -else
+      #spf_results.well.alert-error
+        #spf_icon.span1.validate_image
+          %center
+            =image_tag "wl_fail.gif"
+        #spf_label.span2
+          SPF
+        #spf_results.span2
+          =@resSPF
+        %br
+        %br
+        #spf_moreinfo.span11.uneditable-input
+          =@resSPFReason
+
+    -if @resCNAME == "PASS"
+      #cname_results.well.alert-success
+        #cname_icon.span1.validate_image
+          %center
+            =image_tag "wl_pass.gif"
+        #cname_label.span2
+          CNAME
+        #cname_results.span2
+          =@resCNAME
+
+        #cname_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "#results", "data-toggle" => "collapse", :href => "#cname_moreinfo_body"}
+            Show/Hide More Info
+        %br
+        %br
+        #cname_moreinfo_body.accordion-body.collapse
+          #cname_moreinfo_inner.accordion-inner
+            -@resCNAMEReason.each do |cn|
+              #cname_moreinfo_data.uneditable-input.span11
+                =cn
+              %br
+    -else
+      #cname_results.well.alert-error
+        #cname_icon.span1.validate_image
+          %center
+            =image_tag "wl_fail.gif"
+        #cname_label.span2
+          CNAME
+        #cname_results.span2
+          =@resCNAME
+        %br
+        %br
+        #cname_moreinfo.span11.uneditable-input
+          =@resCNAMEReason
+
+    -if @resDKIM1 == "PASS"
+      #dkim1_results.well.alert-success
+        #dkim1_icon.span1.validate_image
+          %center
+            =image_tag "wl_pass.gif"
+        #dkim1_label.span2
+          DKIM #1
+        #dkim1_results.span2
+          =@resDKIM1
+
+        #dkim1_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "#results", "data-toggle" => "collapse", :href => "#dkim1_moreinfo_body"}
+            Show/Hide More Info
+        %br
+        %br
+        #dkim1_moreinfo_body.accordion-body.collapse
+          #dkim1_moreinfo_inner.accordion-inner
+            -@resDKIM1Reason.each do |d1r|
+              #dkim1_moreinfo_data.uneditable-input.span11
+                =d1r
+              %br
+    -else
+      #dkim1_results.well.alert-error
+        #dkim1_icon.span1.validate_image
+          %center
+            =image_tag "wl_fail.gif"
+        #dkim1_label.span2
+          DKIM #1
+        #dkim1_results.span2
+          =@resDKIM1
+        %br
+        %br
+        #dkim1_moreinfo.span11.uneditable-input
+          =@resDKIM1Reason
+
+    -if @resDKIM2 == "PASS"
+      #dkim2_results.well.alert-success
+        #dkim2_icon.span1.validate_image
+          %center
+            =image_tag "wl_pass.gif"
+        #dkim2_label.span2
+          DKIM #2
+        #dkim2_results.span2
+          =@resDKIM2
+
+        #dkim2_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "#results", "data-toggle" => "collapse", :href => "#dkim2_moreinfo_body"}
+            Show/Hide More Info
+        %br
+        %br
+        #dkim2_moreinfo_body.accordion-body.collapse
+          #dkim2_moreinfo_inner.accordion-inner
+            -@resDKIM2Reason.each do |d2r|
+              #dkim2_moreinfo_data.uneditable-input.span11
+                =d2r
+              %br
+    -else
+      #dkim2_results.well.alert-error
+        #dkim2_icon.span1.validate_image
+          %center
+            =image_tag "wl_fail.gif"
+        #dkim2_label.span2
+          DKIM #2
+        #dkim2_results.span2
+          =@resDKIM2
+        %br
+        %br
+        #dkim2_moreinfo.span11.uneditable-input
+          =@resDKIM2Reason
+
+    -if @resAPass == "PASS"
+      #a_results.well.alert-success
+        #a_icon.span1.validate_image
+          %center
+            =image_tag "wl_pass.gif"
+        #a_label.span2
+          A/IP(s)
+        #a_results.span2
+          =@resAPass
+
+        #a_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "#results", "data-toggle" => "collapse", :href => "#a_moreinfo_body"}
+            Show/Hide More Info
+        %br
+        %br
+        #a_moreinfo_body.accordion-body.collapse
+          #a_moreinfo_inner.accordion-inner
+            -@resAList.each do |a|
+              #a_moreinfo_data.uneditable-input.span11
+                =a
+              %br
+    -else
+      #a_results.well.alert-error
+        #a_icon.span1.validate_image
+          %center
+            =image_tag "wl_fail.gif"
+        #a_label.span2
+          A/IP(s)
+        #a_results.span2
+          =@resAPass
+        %br
+        %br
+        #a_moreinfo.span11.uneditable-input
+          =@resAListReason
+     
+    -if @resMXList
+      #mx_results.well.alert-info
+        #mx_icon.span1.validate_image
+          %center
+            =image_tag "wl_info.gif"
+        #mx_label.span2
+          Mail Exchange/MX
+        #mx_moreinfo.btn.btn-default.btn-mini.pull-right
+          %mx.accordion-toggle{"data-parent" => "results", "data-toggle" => "collapse", :href => "#mx_moreinfo_body"}
+            Show/Hide MX Records
+        %br
+        %br
+        #mx_moreinfo_body.accordion-body.collapse
+          #mx_moreinfo_inner.accordion-inner
+            -@resMXList.each do |mx|
+              #mx_moreinfo_data.uneditable-input.span11
+                =mx
+              %br
+
+    -if @resInfo
+      #info_results.well.alert-info
+        #info_icon.span1.validate_image
+          %center
+            =image_tag "wl_info.gif"
+        #info_label.span2
+          Session Info
+        #info_moreinfo.btn.btn-default.btn-mini.pull-right
+          %a.accordion-toggle{"data-parent" => "results", "data-toggle" => "collapse", :href => "#info_moreinfo_body"}
+            Show/Hide DNS Details
+        %br
+        %br
+        #info_moreinfo_body.accordion-body.collapse
+          #info_moreinfo_inner.accordion-inner
+            -@resInfo.each do |info|
+              #info_moreinfo_data.uneditable-input.span11
+                =info
+              %br
+
+%a.nav.pull-left.feedback{:href => 'https://docs.google.com/a/sendgrid.com/spreadsheet/viewform?formkey=dHAxNk9xT0NZWTlmWWlwajBhVHRKVUE6MQ'}
+  %p Feedback

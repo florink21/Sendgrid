@@ -1,0 +1,40 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.centered-text {
+    text-align:center
+} 
+
+.feedback {
+  -moz-transform-origin: 0 0;
+  -moz-transform: rotate(270deg);
+  -ms-transform-origin: 0 0;
+  -ms-transform: rotate(270deg);
+  -o-transform-origin: 0 0;
+  -o-transform: rotate(270deg);
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(270deg);
+  border-top: none;
+  background-color: #d9edf7;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  left: 0px;
+  line-height: 50%;
+  margin: 0;
+  padding: 6px 10px;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  top: 45%;
+  transform: rotate(270deg);
+  z-index: 100000;
+}

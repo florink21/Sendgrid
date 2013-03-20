@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.black_matte {
+	background-color: #000000;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.status_container {
+	width: 400px;
+	height: 930px;
+	position: absolute;
+	top: 100px;
+	left: 1480px;
+	background-color: #222222;
+        font-family: "Arial Narrow";
+        font-size: 20px;
+        color: #AAA;
+	padding-top: 20px;
+}
+.health_index_style {
+	width: 329px;
+	height: 318px;
+	position: absolute;
+	left: 50px;
+	top: 100px;
+}
+.major_items {
+        width: 241px;
+	height: 241px;
+	position: absolute;
+	top: 100px
+}
+.major_new_tickets {
+	left: 400px;
+}
+.major_aging_tickets {
+	left: 673px;
+}
+.major_chats {
+	left: 945px;
+}
+.major_calls {
+	left: 1215px;
+}
+.major_headers {
+	width: 242px;
+	height: 54px;
+	position: absolute;
+	top: 357px;
+}
+.major_header_1 {
+	left: 400px;
+}
+.major_header_2 {
+	left: 673px;
+}
+.major_header_3 {
+	left: 945px;
+}
+.major_header_4 {
+	left: 1215px;
+}
+.major_new_tickets_hv_hidden {
+	width: 242px;
+	height: 54px;
+	position:absolute;
+	top: 412px;
+	left: 400px;
+	z-index: 20;
+	visibility: hidden;
+}
+.major_new_tickets_hv_visible {
+	width: 242px;
+	height: 54px;
+	position:absolute;
+	top: 412px;
+	left: 400px;
+	z-index: 20;
+	visibility: visible;
+}
+.major_aging_tickets_hv_hidden {
+	width: 242px;
+	height: 54px;
+	position:absolute;
+	top: 412px;
+	left: 673px;
+	z-index: 20;
+	visibility: hidden;
+}
+.major_aging_tickets_hv_visible {
+	width: 242px;
+	height: 54px;
+	position:absolute;
+	top: 412px;
+	left: 673px;
+	z-index: 20;
+	visibility: visible;
+}
+.health_graph {
+	height: 225px;
+	width: 1406px;
+	position: absolute;
+	border: 1px solid black;
+	background-color: #222222;	
+	top: 462px;
+	left: 50px;
+	opacity: 0.70;
+	filter:alpha(opacity=70);
+	z-index: 20;
+}
+.graph_caption {
+	height: 20px;
+	width: 1406px;
+	position: absolute;
+	top: 667px;
+	left: 50px;
+	font-family: "Arial Narrow";
+	font-size: 16px;
+	color: #999999;
+	z-index: 21;
+}
+.sendgrid_logo {
+	width: 1172px;
+	height: 302px;
+	position: absolute;
+	top: 416px;
+	left: 200px;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	z-index: 1;
+}
+.minor_header_1_single {
+	width: 147px;
+	height: 52px;
+	position: absolute;
+	top: 730px;	
+	left: 50px;
+}
+.minor_header_2_double {
+	width: 323px;
+	height: 52px;
+	position: absolute;
+	top: 730px;
+	left: 295px;
+}
+.minor_header_3_double {
+	width: 323px;
+	height: 52px;
+	position: absolute;
+	top: 730px;
+	left: 720px;
+}
+.minor_header_4_double {
+	width: 323px;
+	height: 52px;
+	position: absolute;
+	top: 730px;
+	left: 1136px;
+}
+.minor_items {
+        width: 147px;
+        height: 192px;
+        position: absolute;
+        top: 790px;
+}
+.minor_item_1_0 {
+	left: 50px;
+}
+.minor_item_2_1 {
+	left: 295px;	
+}
+.minor_item_2_2 {
+	left: 471px;
+}
+.minor_item_3_1 {
+	left: 720px;	
+}
+.minor_item_3_2 {
+	left: 897px;
+}
+.minor_item_4_1 {
+	left: 1136px;
+}
+.minor_item_4_2 {
+	left: 1312px;
+}
+.minor_icons {
+        width: 95px;
+        height: 73px;
+	position: absolute;
+        top: 801px;
+}        
+.minor_icon_1 {
+	left: 76px;
+}
+.minor_icon_2 {
+	left: 322px;
+}
+.minor_icon_3 {
+	left: 496px;
+}
+.minor_icon_4 {
+	left: 748px;
+}
+.minor_icon_5 {
+	left: 923px;
+}
+.minor_icon_6 {
+	left: 1163px;
+}
+.minor_icon_7 {
+	left: 1338px;
+}
+.status_box_info {
+	background: url("status_block_info.png");
+}
+.status_box_issue {
+	background: url("status_block_issue.png");
+}
+.health_caption {
+	font-family: "Arial Narrow";
+	font-size: 30px;
+	position: absolute;
+	width: 250px;
+	height: 64px;
+	color: #C0C0C0;
+	top: 315px;
+	left: 87px;
+}
+.major_values {
+	font-family: "Arial Narrow";
+	font-size: 108px;
+        color: #FFF;
+	width: 150px;
+	position: absolute;
+	top: 210px;
+}
+.health_value {
+	font-family: "Arial Narrow";
+	font-size: 132px;
+        color: #FFF;
+	width: 200px;
+	position: absolute;
+	top: 215px;
+	left: 114px;
+}
+.new_tickets_value {
+	left: 445px;
+}
+.aging_tickets_value {
+	left: 720px;
+}
+.active_chats_value {
+	left: 991px;
+}
+.active_calls_value {
+	left: 1263px;
+}
+.minor_values {
+	font-family: "Arial Narrow";
+	font-size: 48px;
+        color: #FFF;
+	width: 100px;
+	position: absolute;
+	top: 922px;
+}
+.agents_on_chats_value {
+	left: 75px;
+}
+.emails_sent_value {
+	left: 319px;
+}
+.kamta_queue_value {
+	left: 495px;
+}
+.provisioned_users_value {
+	left: 744px;
+}
+.awaiting_provisioning_value {
+	left: 921px;
+}
+.sla_new_tickets_value {
+	left: 1161px;
+}
+.sla_aging_tickets_value {
+	left: 1337px;
+}
+.minor_captions {
+	font-family: "Arial Narrow";
+	font-size: 18px;
+	color: #FFF;
+	width: 147px;
+    	position: absolute;
+	top: 985px;
+}
+.minor_caption_agents_on_chat {
+	left: 50px;
+}
+.minor_caption_emails_sent {
+	left: 295px;
+}
+.minor_caption_kamta_queue {
+	left: 471px;
+}
+.minor_caption_provisioned_users {
+	left: 720px;
+}
+.minor_caption_awaiting_provisioning {
+	left: 897px;
+}
+.minor_caption_sla_new_tickets {
+	left: 1136px;
+}
+.minor_caption_sla_aging_tickets {
+	left: 1312px;
+}
+.posts_caption {
+	font-family: "Arial Narrow";
+	font-size: 16px;
+	color: #EEE;
+}
+.posts_body {
+	font-family: "Arial Narrow";
+	font-size: 16px;
+	color: #CCC;
+}
+.posts_timestamp {
+	font-family: "Arial Narrow";
+	font-size: 14px;
+	color: #999;
+}

@@ -1,0 +1,6 @@
+The files contained in this folder are to be used for system cron jobs to gather stats.
+
+
+sgdb-1.pl -  Fire every minute
+sgdb-5.pl -  Fire every 5 minutes
+sgdb-60.pl - Fire every 60 minutes
